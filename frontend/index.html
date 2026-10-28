@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173a45">
+    <title>问卷集 · 在线问卷</title>
+    <link rel="stylesheet" href="/assets/css/app.css?v=1">
+  </head>
+  <body>
+    <div id="auth-screen" class="auth-screen" hidden></div>
+    <div id="app-screen" class="app-screen" hidden>
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="问卷集首页">
+          <span class="brand-mark">问</span>
+          <span><strong>问卷集</strong><small>COLLECT INSIGHTS</small></span>
+        </a>
+        <div class="topbar-right">
+          <span id="user-name" class="user-name"></span>
+          <button id="logout-button" class="button button-quiet button-small" type="button">退出登录</button>
+        </div>
+      </header>
+      <div class="app-layout">
+        <aside class="sidebar">
+          <p class="nav-label">工作台</p>
+          <button class="nav-item is-active" type="button" data-nav="dashboard"><span class="nav-icon">▤</span>我的问卷</button>
+          <button class="nav-item" type="button" data-action="new-survey"><span class="nav-icon">＋</span>创建问卷</button>
+          <button class="nav-item" type="button" data-nav="question-library"><span class="nav-icon">▧</span>个人题库</button>
+          <div class="sidebar-note">
+            <span class="note-dot"></span>
+            <div><strong>随时保存</strong><small>答题进度会自动保留</small></div>
+          </div>
+          <div class="sidebar-footer">简洁 · 清晰 · 有洞察</div>
+        </aside>
+        <main id="app-view" class="app-view" tabindex="-1"></main>
+      </div>
+    </div>
+    <div id="toast-region" class="toast-region" aria-live="polite"></div>
+    <script src="/assets/js/app.js?v=3" defer></script>
+  </body>
+</html>
